@@ -1,0 +1,13 @@
+{
+  "name": "tailwind-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "tailwindcss -i ./css/style.css -o ./css/output.css --watch",
+    "build": "tailwindcss -i ./css/style.css -o ./css/output.css --minify"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.2.4",
+    "@tailwindcss/cli": "^4.2.4"
+  }
+}

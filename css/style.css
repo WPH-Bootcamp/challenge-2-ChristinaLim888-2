@@ -1,1 +1,71 @@
-/* code-here */
+@import "tailwindcss";
+
+@source "../index.html";
+
+/* BASE */
+@layer base {
+  body {
+    @apply bg-black text-white;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* COMPONENTS */
+@layer components {
+  .nav-container {
+    @apply px-5 py-4 md:px-44;
+  }
+  .main-container {
+    @apply px-5 md:px-44;
+  }
+  .btn-primary {
+    @apply bg-[#421ABC] px-8 py-3 rounded-full text-white hover:text-neutral-400 hover:bg-[#4d27be];
+  }
+  .menu-item {
+    @apply text-white hover:text-gray-300 transition px-5;
+  }
+  .header-title {
+    @apply text-4xl md:text-5xl font-bold leading-tight;
+  }
+  .kiri {
+    @apply flex flex-col gap-4 max-w-xl md:text-left;
+  }
+  .all-title {
+    @apply text-3xl lg:text-5xl font-bold pb-2 lg:pb-4 text-center;
+  }
+  .main-padding {
+    @apply px-5 lg:px-44 py-10 lg:py-20;
+  }
+  .subtitle {
+    @apply text-neutral-400 text-lg text-center lg:pb-18 pb-3;
+  }
+  .job-grid {
+    @apply grid grid-cols-2 lg:grid-cols-3 lg:gap-4 gap-3;
+  }
+  .job {
+    @apply border-2 border-[#181d27] rounded-lg 
+         flex flex-col items-center text-center 
+         p-4 lg:p-6 transition hover:scale-105 hover:border-[#421abc];
+  }
+  .job img {
+    @apply w-10 lg:w-14 mb-3;
+  }
+  .job h2,
+  .job h3 {
+    @apply text-base lg:text-lg font-semibold mb-2;
+  }
+
+  .job p {
+    @apply text-sm lg:text-base text-neutral-400 leading-8;
+  }
+  .porto-grid {
+    @apply grid grid-cols-1 lg:grid-cols-3 lg:gap-2 gap-1;
+  }
+  .porto {
+    @apply flex flex-col items-center text-center 
+         p-4 lg:p-6 transition hover:scale-105;
+  }
+  .porto p {
+    @apply font-bold;
+  }
+}
