@@ -8,7 +8,7 @@
     <title>Challenge - 2</title>
   </head>
   <body>
-    <nav class="nav-container flex items-center justify-between border-2 border-red-300">
+    <nav class="nav-container flex items-center justify-between">
       <h1 class="text-2xl font-semibold">Tech.</h1>
       <!-- MENU -->
       <div class="hidden md:flex justify-between items-center">
@@ -23,8 +23,8 @@
       <div class="md:hidden text-2xl cursor-pointer">☰</div>
     </nav>
     <!-- ========================= Build With The Future ========================= -->
-    <header class="bg-gradient-to-b from-black via-black to-[#210a5e]">
-      <div class="px-5 md:px-44 flex flex-col md:flex-row items-center justify-between border-2 border-yellow-300">
+    <header class="bg-gradient-to-b from-black from-[70%] to-[#210a5e] to-[100%]">
+      <div class="px-5 md:px-44 flex flex-col md:flex-row items-center justify-between">
         <!-- KIRI -->
         <div class="kiri">
           <h1 class="header-title pt-10">Build with the <span class="italic">Future.</span></h1>
@@ -41,12 +41,12 @@
       </div>
     </header>
     <!-- ========================= Who We Are ========================= -->
-    <div class="main-padding border-2 border-green-300">
+    <div class="main-padding">
       <h2 class="all-title">Who We Are</h1>
       <p class="text-md lg:text-[28px] text-center lg:px-8"><span class="italic text-neutral-400">We're a group of tech students trained in</span> building real-world digital products. <span class="italic text-neutral-400">From coding to design, we</span> craft modern solutions for modern problems.</p>
     </div>
     <!-- ========================= What We Do ========================= -->
-    <main class="main-padding border-2 border-red-300">
+    <main class="main-padding">
       <div>
         <h2 class="all-title">What We Do</h2>
         <p class="subtitle">We offer simple tech solutions to help your ideas grow.</p>
@@ -54,7 +54,7 @@
       <div class="job-grid">
         <div class="job">
           <img src="./assets/images/Website.svg" alt="">
-          <h3>Web Development</h3>
+          <h2>Web Development</h2>
           <p>Modern websites using HTML, CSS, JavaScript, and frameworks.</p>
         </div>
         <div class="job">
@@ -85,14 +85,14 @@
       </div>
     </main>
     <!-- ========================= Our Work ========================= -->
-    <main class="main-padding border-2 border-red-300">
+    <main class="main-padding">
       <div>
         <h2 class="all-title">Our Work</h2>
         <p class="subtitle">See what we’ve built with passion and purpose</p>
       </div>
       <div class="porto-grid">
         <div class="porto">
-          <img src="./assets/images/Frame 1618873821 (1).svg" alt="">
+          <img src="./assets/images/Frame 1618873821 (2).svg" alt="">
           <p>Portofolio 1</p>
         </div>
         <div class="porto">
@@ -100,17 +100,92 @@
           <p>Portofolio 2</p>
         </div>
         <div class="porto">
-          <img src="./assets/images/Frame 1618873821 (1).svg" alt="">
+          <img src="./assets/images/Frame 1618873821.svg" alt="">
           <p>Portofolio 3</p>
         </div>
       </div>
     </main>
     <!-- ========================= Meet The Team ========================= -->
+     <main class="main-padding">
+      <div>
+        <h2 class="all-title">Meet The Team</h2>
+        <p class="subtitle">A group of future-ready tech makers.</p>
+      </div>
+      <div class="the-team">
+        <div class="team">
+          <img src="./assets/images/Ellipse 7.svg" alt="">
+          <h3>Jasper Kim</h3>
+          <p>Project Manager</p>
+        </div>
+        <div class="team">
+          <img src="./assets/images/Ellipse 7 (1).svg" alt="">
+          <h3>Alex Jonathan</h3>
+          <p> Full-stack Developer</p>
+        </div>
+        <div class="team">
+          <img src="./assets/images/Ellipse 7 (2).svg" alt="">
+          <h3>Mario Lopez</h3>
+          <p> UI/UX Designer</p>
+        </div>
+        <div class="team">
+          <img src="./assets/images/Ellipse 7 (3).svg" alt="">
+          <h3>Jasper Kim</h3>
+          <p>Data Scientist</p>
+        </div>
+      </div>
+     </main>
 
     <!-- ========================= Let's Collaborate ========================= -->
-        
+     <section class="main-padding ">
+      <div>
+        <h2 class="all-title"> Let’s Collaborate </h2>
+        <p class="subtitle">Need a tech team? We're ready to help</p>
+      </div>
+       <div class="w-full max-w-2xl items-center justify-center mx-auto">
+
+    <!-- FORM -->
+    <form class="space-y-6 my-5 lg:mt-0">
+
+      <!-- NAME -->
+      <div>
+        <label class="block text-white mb-2 font-semibold">Name</label>
+        <input 
+          type="text" 
+          placeholder="Enter your name"
+          class="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#421ABC]"
+        >
+      </div>
+
+      <!-- EMAIL -->
+      <div>
+        <label class="block text-white mb-2 font-semibold">Email</label>
+        <input 
+          type="email" 
+          placeholder="Enter your email"
+          class="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#421ABC]"
+        >
+      </div>
+
+      <!-- MESSAGE -->
+      <div>
+        <label class="block text-white mb-2 font-semibold">Message</label>
+        <textarea 
+          rows="5"
+          placeholder="Enter your message"
+          class="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#421ABC] resize-none"></textarea>
+      </div>
+
+      <!-- BUTTON -->
+      <button 
+        type="submit"
+        class="btn-primary w-full">
+        Send
+      </button>
+    </form>
+  </div>
+     </section>
     <!-- ========================= Footer ========================= -->
-     <footer class="text-center text-sm lg:text-[16px] px-6 lg:px-20 py-5 lg:py-8">
+     <footer class="text-center text-sm lg:text-[16px] px-6 lg:px-20 py-5 lg:py-8 border-t-2 border-[#181d27]">
       <p class="text-neutral-400">© 2025 Web Programming Hack. All rights reserved.</p>
      </footer>
   </body>

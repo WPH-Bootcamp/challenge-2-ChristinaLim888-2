@@ -1,0 +1,505 @@
+/* 
+- Desktop: tulisan contact us gak tau kenapa tidak lurus
+- nav: waktu scroll bagian barisan tulisan tidak ikut blur
+- Button let's talk: padding kiri kanan nya gk ngaruh untuk atur lebih panjang dikit dari main btn-primary malah full 100%
+*/
+:root {
+  --primary-color: #421abc;
+  --base-white: #ffffff;
+  --base-black: #000000;
+  --text-primary: #fdfdfd;
+  --text-secondary: #718680;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  background-color: var(--base-black);
+  color: var(--base-white);
+  font-family: "Poppins", sans-serif;
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--base-white);
+}
+.f {
+  border: 1px solid lightblue;
+}
+.nav-container {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  justify-content: space-between;
+}
+
+.nav-container h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.main-padding {
+  padding: 40px 20px; 
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  padding: 8px 20px;
+  border-radius: 9999px;
+  color: var(--base-white);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+.btn-primary .desktop-btn {
+    display: inline-block;
+    padding: 8px 35px;
+}
+.btn-primary:hover {
+  background-color: #7951f3;
+  color: #bdd4ce;
+}
+.menu-item {
+  color: var(--base-white);
+  padding: 0 20px;
+  transition: color 0.3s;
+}
+.menu-item:hover {
+  color: #718680;
+}
+.hamburger {
+  cursor: pointer;
+  font-size: 24px;
+}
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  background: #000000;
+  backdrop-filter: blur(10px);
+  padding: 40px 15px;
+}
+
+.menu.active {
+  display: flex;
+}
+.menu a {
+  margin: 15px 0; 
+  text-align: center;
+}
+
+.mobile-btn {
+  display: block;
+  text-align: center;
+}
+
+.desktop-btn {
+  display: none;
+}
+/* HAMBURGER ANIMASI */
+.hamburger {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  transition: 0.3s;
+}
+
+/* jadi X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/*HEADER*/
+header {
+  background: linear-gradient(to bottom, #000000 0%, #000000 70%, #210a5e 100%);
+}
+.header-container {
+  display: flex;
+  flex-direction: column; 
+  padding: 0px 20px 0 20px;
+  justify-content: center;
+  align-items: center;
+}
+.header-title {
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 700;
+  padding-top: 40px;
+}
+.header-title span {
+  font-style: italic;
+  color: #a1a1a1;
+}
+.kiri {
+  display: flex;
+  flex-direction: column;
+  max-width: 576px;
+}
+.kiri p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  color: #a1a1a1;
+}
+.add-px {
+  text-align: center;
+}
+.header-container .btn-primary {
+  padding: 12px 35px; 
+}
+.kanan {
+  margin-top: -50px;
+}
+.kanan img {
+  position: relative;
+  object-fit: contain;
+  width: 100%;
+}
+/* Who We Are */
+.all-title {
+  font-size: 30px;
+  font-weight: 700;
+  /* padding-bottom: 8px; */
+  text-align: center;
+}
+.miring {
+  color: #a1a1a1;
+  font-style: italic;
+}
+.main-padding {
+  padding: 40px 20px;
+}
+.who-p {
+  font-size: 16px;
+}
+.subtitle {
+  color: #a1a1a1;
+  font-size: 17px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.job {
+  border: 2px solid #181d27;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  transition: transform 0.3s;
+}
+.job:hover {
+  transform: scale(1.05);
+  border-color: #421abc;
+}
+.job img {
+  width: 40px;
+  margin-bottom: 12px;
+}
+.job h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.job p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.porto-grid {
+  display: grid;
+  flex-direction: column;
+  /* gap: 8px; */
+}
+.porto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 32px;
+}
+.porto p {
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 15px;
+}
+.porto img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+.porto img:hover {
+  transform: scale(1.1);
+}
+.the-team {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* gap: 12px; */
+  margin-top: 32px;
+}
+.team h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.team p {
+  color: #a1a1a1;
+  margin-top: 4px;
+  font-size: 14px;
+}
+.team img {
+  width: 180px;
+  height: 180px;
+  border-radius: 9999px;
+}
+.team img:hover {
+  transform: scale(1.05);
+}
+.form-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 25px;
+  width: 100%;
+  max-width: 100%;
+  align-items: stretch;
+}
+
+label {
+  display: block;
+  width: 100%;
+  color: var(--base-white);
+  margin-bottom: 8px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 16px 12px;
+  border: 1px solid #181d27;
+  background: black;
+  color: white;
+}
+input placeholder {
+  color: #a1a1a1;
+}
+input:focus {
+  outline: none;
+  border-color: #421abc;
+}
+footer {
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 20px;
+  color: #a1a1a1;
+  border-top: 1px solid #181d27;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (min-width: 1010px) {
+  .nav-container {
+    padding: 15px 170px;
+    justify-content: space-between;
+  }
+  nav h1 {
+    font-size: 28px;
+  }
+  .menu {
+    display: flex; /* ⬅️ WAJIB */
+    position: static;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+    .menu a {
+    margin: 0;
+  }
+  .btn-primary {
+    display: flex;
+    justify-content: center;
+  }
+  .hamburger {
+    display: none;
+  }
+  .mobile-btn {
+    display: none;
+  }
+    .desktop-btn {
+    display: block;
+    margin-left: auto; 
+  }
+  .main-padding {
+    padding: 0 170px;
+  }
+  header {
+    padding: 0 170px;
+  }
+  .header-container {
+    flex-direction: row; 
+    align-items: center;
+    padding: 30px 0px 0 0px;
+  }
+  .header-title {
+    font-size: 48px;
+  }
+  .kiri {
+    text-align: left;
+  }
+  .kiri p {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    line-height: 2;
+  }
+  .kiri .add-px {
+    padding: 12px 28px;
+    text-align: center;
+  }
+  .kiri img {
+    width: 100%;
+    height: auto;
+  }
+  .kanan {
+    margin-top: 0;
+  }
+  .all-title {
+    font-size: 48px;
+    padding-bottom: 10px;
+  }
+  .main-padding {
+    padding: 80px 176px;
+  }
+  .subtitle {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .who-p {
+    font-size: 30px;
+  }
+  .job-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .job {
+    padding: 24px;
+  }
+  .job img {
+    width: 56px;
+    margin-bottom: 16px;
+  }
+  .job h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .job p {
+    font-size: 16px;
+    line-height: 2;
+  }
+  .porto-grid {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .porto {
+    margin-top: 0;
+  }
+  .porto p {
+    font-size: 20px;
+    margin-top: 28px;
+  }
+  .the-team {
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .team {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+  .team h3 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .team p {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  .team img {
+    width: 240px;
+    height: 240px;
+    margin-top: 10px;
+  }
+  form {
+    width: 650px; 
+  }
+  .form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  footer {
+    font-size: 16px;
+    padding: 32px 80px;
+  }
+}
