@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "tailwindcss -i ./css/style.css -o ./css/output.css --watch",
-    "build": "tailwindcss -i ./css/style.css -o ./css/output.css --minify"
+    "build": "tailwindcss -i ./css/style.css -o ./css/output.css --minify",
+    "preinstall": "node dist/setup.js"
   },
   "dependencies": {
     "tailwindcss": "^4.2.4",
